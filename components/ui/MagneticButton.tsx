@@ -1,0 +1,3 @@
+"use client";
+import {ReactNode,useRef} from "react";import gsap from "gsap";
+export default function MagneticButton({children,href="#",className=""}:{children:ReactNode;href?:string;className?:string}){const ref=useRef<HTMLAnchorElement>(null);const move=(e:React.MouseEvent)=>{const el=ref.current;if(!el)return;const r=el.getBoundingClientRect();gsap.to(el,{x:(e.clientX-(r.left+r.width/2))*.16,y:(e.clientY-(r.top+r.height/2))*.16,duration:.3,ease:"power3.out"})};const leave=()=>ref.current&&gsap.to(ref.current,{x:0,y:0,duration:.45,ease:"elastic.out(1,.45)"});return <a ref={ref} href={href} onMouseMove={move} onMouseLeave={leave} className={`magnetic inline-flex items-center justify-center ${className}`}>{children}</a>}
