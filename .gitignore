@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+
+# Local environment files
+.env*
+!.env.example
+
+# Logs
+*.log
+
+# OS and editor files
+.DS_Store
+.vscode/
