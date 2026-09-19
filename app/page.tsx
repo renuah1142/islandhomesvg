@@ -8,10 +8,9 @@ import WhyChoose from "@/components/sections/WhyChoose";
 import Features from "@/components/sections/Features";
 import Process from "@/components/sections/Process";
 import Gallery from "@/components/sections/Gallery";
+import Catalog from "@/components/sections/Catalog";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 import SmoothScroll from "@/components/animations/SmoothScroll";
 import ScrollReveal from "@/components/animations/ScrollReveal";
-export default function Home() {
-  return <SmoothScroll><Preloader /><CustomCursor /><Nav /><main><Hero /><About /><Models /><WhyChoose /><Features /><Process /><Gallery /><Contact /></main><Footer /><ScrollReveal /></SmoothScroll>;
-}
+export default function Home(){return <SmoothScroll><Preloader/><CustomCursor/><Nav/><main><Hero/><About/><Models/><WhyChoose/><Features/><Process/><Gallery/><Catalog/><Contact/></main><Footer/><ScrollReveal/></SmoothScroll>}
